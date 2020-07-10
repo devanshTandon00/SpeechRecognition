@@ -1,0 +1,25 @@
+body{
+  background-color: #bb3b0e;
+}
+
+.form{
+  text-align: center;
+  padding-top: 20%;
+}
+
+.textBox{
+  width: 50%;
+  height: 8%;
+  border: gradient;
+  border-radius: 5px;
+}
+
+.button{
+  width: 8%;
+  height: 8%;
+  border-radius: 25px;
+}
+
+#searchBar{
+
+}
