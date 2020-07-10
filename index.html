@@ -5,13 +5,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 <body>
-
   <div class = "form">
     <form action = "https://www.google.com/search" target = "_blank" id = "searchBar">
-    <input class = "textBox" type = "text" name = "q" placeholder="Search Google...." autofocus>
-      <button class = "button" type = "button"><i class = "fa fa-microphone" width = 25></i></button>
+    <!-- autofocus automatically focuses on the search bar when the user first lands on the webpage,
+    autocomplete is off so it does not make suggestions -->
+    <input class = "textBox" type = "text" name = "q" placeholder= "SEarCH GOogLE ...." autocomplete="off" autofocus>
+      <button class = "button" type = "button"><i class = "fa fa-microphone" style="color:white"></i>
+</button>
     </input>
-  </form>
+    </form>
   </div>
   <script src = "index.js"></script>
 </body>

@@ -12,14 +12,27 @@ body{
   height: 8%;
   border: gradient;
   border-radius: 5px;
+  position: relative;
+  background-color: black;
 }
 
 .button{
   width: 8%;
   height: 8%;
-  border-radius: 25px;
+  border-radius: 5px;
+  left: 66.9%;
+  background-color: black;
+    /* position: absolute; */
 }
 
-#searchBar{
+/* Changes the textcolor when searching to white */
+input, select, option {
+color:white;
+}
 
+
+::placeholder{
+  opacity: 1px;
+}
+#searchBar{
 }
