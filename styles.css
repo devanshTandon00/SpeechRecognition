@@ -16,23 +16,21 @@ body{
   background-color: black;
 }
 
-.button{
-  width: 8%;
-  height: 8%;
+i{
+  width: 10%;
+  height: 10%;
   border-radius: 5px;
-  left: 66.9%;
-  background-color: black;
-    /* position: absolute; */
+  left: 60%;
+  /* background-color: black; */
+  position: absolute;
 }
 
 /* Changes the textcolor when searching to white */
 input, select, option {
 color:white;
+font-size: 15px;
 }
-
 
 ::placeholder{
   opacity: 1px;
-}
-#searchBar{
 }
