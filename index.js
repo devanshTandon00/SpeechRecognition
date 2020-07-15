@@ -17,26 +17,31 @@ recognition.interimResults = true;
 const msg = () => {
   mic.addEventListener('click', () => {
     // the classList will output fa at position 0 and fa-microphone at position 1.
-    if(micIcon.classList.contains("fa-microphone")){
-      micIcon.classList.remove("fa-microphone");
-      micIcon.classList.add("fa-microphone-slash");
+      if(micIcon.classList.contains("fa-microphone")){
       recognition.start();
-      console.log("Mic is clicked");
+      console.log("Started recognition");
     }
     else{
-
+      recognition.stop();
+      console.log("Stopped recognition");
     }
   });
 }
 
-
 if(recognition){
   console.log("Your Browser supports speech Recognition");
+
   msg();
+
+  recognition.onstart = function() {
+    micIcon.classList.remove("fa-microphone");
+    micIcon.classList.add("fa-microphone-slash");
+    console.log("Rec Active");
+  }
+
+  recognition.onend = function(){
+    console.log("Rec not active");
+    micIcon.classList.remove("fa-microphone-slash");
+    micIcon.classList.add("fa-microphone");
+  }
 }
-
-// mic.
-
-// recognition.addEventListener('start', function() {
-//   console.log('Speech recognition service has started');
-// });

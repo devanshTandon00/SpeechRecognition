@@ -10,25 +10,22 @@ body{
 .textBox{
   width: 50%;
   height: 8%;
-  border: gradient;
   border-radius: 5px;
-  position: relative;
   background-color: black;
+  text-align: center;
 }
 
 i{
-  width: 10%;
-  height: 10%;
-  border-radius: 5px;
-  left: 60%;
-  /* background-color: black; */
-  position: absolute;
+  top: 44%;
+    right: 27%;
+    /* left: 60%; */
+    position: absolute;
 }
 
 /* Changes the textcolor when searching to white */
 input, select, option {
-color:white;
-font-size: 15px;
+  color:white;
+  font-size: 15px;
 }
 
 ::placeholder{
