@@ -2,6 +2,7 @@ const searchBar = document.querySelector('#searchBar');
 const mic = document.querySelector('i.fa.fa-microphone');
 const micIcon = document.querySelector('i');
 const textBox = document.getElementsByTagName('input')[0];
+const para = document.getElementsByTagName('p')[0];
 
 window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
 window.SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
@@ -10,10 +11,6 @@ const recognition = new SpeechRecognition();
 
 // results are continuous
 recognition.continuous = true;
-
-// results are shown on screen as user says things
-// not final results
-recognition.interimResults = true;
 
 const msg = () => {
   mic.addEventListener('click', () => {
@@ -44,18 +41,31 @@ if(recognition){
     micIcon.classList.remove("fa-microphone-slash");
     micIcon.classList.add("fa-microphone");
     console.log("Rec not active");
+    textBox.focus();
   }
 
   recognition.onresult = function(event){
+    const resultIndex = event.resultIndex;
+    const transcript = event.results[resultIndex][0].transcript;
 
-    if(event.results[0][0].transcript == "go"){
-      searchBar.submit();
+    if(transcript.toLowerCase().trim() === "stop recording"){
+      recognition.stop();
     }
-    else if(event.results[0][0].transcript == "reset"){
-      searchBar.reset();
+    else if(!textBox.value){
+      textBox.value = transcript;
     }
     else{
-    textBox.value = event.results[0][0].transcript;}
-    console.log(event);
+      if(transcript.toLowerCase().trim() === "go"){
+        searchBar.submit();
+      }
+      else if(transcript.toLowerCase().trim() === "reset"){
+        searchBar.reset();
+      }
+      else{
+        textBox.value = transcript;
+      }
+    }
+
+    para.textContent = transcript;
   }
 }

@@ -15,11 +15,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.form{
   text-align: center;
   padding-top: 20%;
+}
+
+p{
+  color: white;
 }
 
 input{
