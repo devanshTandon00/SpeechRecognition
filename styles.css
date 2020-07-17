@@ -1,7 +1,7 @@
 body {
   margin: 0 !important;
   padding: 0 !important;
-  height: 100%;
+  /* height: 100%; */
   /* overflow: hidden; */
 }
 
@@ -10,13 +10,12 @@ body {
   background-image: url("unsplash.jpg");
   /* Full height */
   height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   text-align: center;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .para{
@@ -35,18 +34,14 @@ input{
 }
 
 i{
-  top: 44%;
-    right: 27%;
-    /* left: 60%; */
-    position: absolute;
+  top: 23%;
+  right: 27%;
+  position: absolute;
+  position: fixed;
 }
 
 /* Changes the textcolor when searching to white */
 input, select, option {
-  color:white;
+  color: white;
   font-size: 10px;
-}
-
-::placeholder{
-  opacity: 1px;
 }

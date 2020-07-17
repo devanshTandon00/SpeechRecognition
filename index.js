@@ -3,6 +3,7 @@ const mic = document.querySelector('i.fa.fa-microphone');
 const micIcon = document.querySelector('i');
 const textBox = document.getElementsByTagName('input')[0];
 const para = document.getElementsByTagName('p')[0];
+const info = document.querySelector('.info');
 
 window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
 window.SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
@@ -73,7 +74,7 @@ if(recognition){
         textBox.value = transcript;
       }
     }
-
+    
     list(event);
   }
 }
