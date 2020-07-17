@@ -2,7 +2,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .form {
@@ -19,8 +19,11 @@ body {
   padding-top: 20%;
 }
 
-p{
+.para{
   color: white;
+  padding: 15px;
+  font-size: 30px;
+  font-family: 'Lexend Zetta', sans-serif;
 }
 
 input{

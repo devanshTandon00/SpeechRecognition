@@ -26,6 +26,14 @@ const msg = () => {
   });
 }
 
+const list = (event) => {
+  const resultIndex = event.resultIndex;
+  const p = document.createElement('p');
+  const text = document.createTextNode(event.results[resultIndex][0].transcript);
+  p.appendChild(text);
+  para.appendChild(p);
+}
+
 if(recognition){
   console.log("Your Browser supports speech Recognition");
 
@@ -66,6 +74,6 @@ if(recognition){
       }
     }
 
-    para.textContent = transcript;
+    list(event);
   }
 }
