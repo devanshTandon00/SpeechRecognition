@@ -23,16 +23,27 @@ const msg = () => {
     else{
       recognition.stop();
       console.log("Stopped recognition");
-    }
+  }
   });
 }
 
 const list = (event) => {
   const resultIndex = event.resultIndex;
-  const p = document.createElement('p');
+
+  // const p = document.createElement('p');
+  const li = document.createElement('li');
+  const list = document.querySelector('#demo');
   const text = document.createTextNode(event.results[resultIndex][0].transcript);
-  p.appendChild(text);
-  para.appendChild(p);
+
+
+  li.appendChild(text);
+  list.appendChild(li);
+  info.appendChild(list);
+
+
+  // 
+  // p.appendChild(text);
+  // info.appendChild(p);
 }
 
 if(recognition){
@@ -74,7 +85,7 @@ if(recognition){
         textBox.value = transcript;
       }
     }
-    
+
     list(event);
   }
 }
