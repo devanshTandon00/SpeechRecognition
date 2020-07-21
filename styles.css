@@ -1,18 +1,16 @@
 body {
   margin: 0 !important;
   padding: 0 !important;
-  /* height: 100%; */
   overflow: hidden;
 }
 
 .form {
   /* The image used */
-  background-image: url("unsplash.jpg");
+  background-image: url("backImg.jpg");
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
   background-position: center;
-  /* background-repeat: no-repeat; */
   background-size: cover;
   text-align: center;
   padding-top: 10%;
@@ -20,7 +18,6 @@ body {
 
 .para{
   color: white;
-  padding: 15px;
   font-size: 30px;
   font-family: 'Lexend Zetta', sans-serif;
 }
@@ -28,7 +25,7 @@ body {
 .info{
   color: white;
   font-family: 'Lexend Zetta', sans-serif;
-
+  /* text-align: center; */
 }
 
 input{
@@ -39,15 +36,26 @@ input{
   text-align: center;
 }
 
-i{
-  top: 23%;
-  right: 27%;
-  position: absolute;
-  position: fixed;
+i {
+  margin-left: -2em;
+  margin-top: 1em;
+  position:absolute;
+  color: white;
 }
 
 /* Changes the textcolor when searching to white */
 input, select, option {
   color: white;
   font-size: 15px;
+}
+
+#demo{
+  width: 90%;
+  list-style-position: inside;
+}
+
+#cmd{
+  color: white;
+  font-family: 'Lexend Zetta', sans-serif;
+  font-size: 10px;
 }

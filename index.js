@@ -41,7 +41,7 @@ const list = (event) => {
   info.appendChild(list);
 
 
-  // 
+  //
   // p.appendChild(text);
   // info.appendChild(p);
 }
@@ -79,13 +79,13 @@ if(recognition){
         searchBar.submit();
       }
       else if(transcript.toLowerCase().trim() === "reset"){
-        searchBar.reset();
+        textBox.value = "";
+        textBox.focus();
       }
       else{
         textBox.value = transcript;
       }
     }
-
     list(event);
   }
 }
